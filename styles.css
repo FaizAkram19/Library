@@ -1,0 +1,141 @@
+/*DEFINING THE THEMES*/
+:root{
+    /* Default will be Dark*/
+    /*We'll be using CSS variables for this*/
+    --bg-color:#1f2937;
+    --header-bg:#111827;
+    --text-color:white;
+    --card-bg:#374151;
+    --button-text:white;
+    --shadow:rgba(0,0,0,0.5);
+
+}
+.light-mode{
+    --bg-color:#f3f4f6;
+    --header-bg:#ffffff;
+    --text-color:#1f2937;
+    --card-bg:#ffffff;
+    --button-text:white;
+    --shadow:rgba(0,0,0,0.5);
+}
+
+/*Global Attributes*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
+    font-family:system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+}
+header{
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--header-bg);
+    box-shadow: 0 4px 6px -1px var(--shadow);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+header h2{
+    font-size: 3rem;
+}
+.header-buttons{
+    display: flex;
+    gap:15px;
+}
+button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+}
+.addBook{
+    background-color: #dc2626;
+    color:var(--button-text);
+}
+#themeBtn{
+    background-color: #4b5563;
+    color: white;
+}
+.booksubmission{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding:20px;
+    min-width: 300px;
+}
+.booksubmission input{
+    padding:8px;
+    border-radius: 4px;
+    border:1px solid #ccc;
+}
+.booksubmission button.submit{
+    margin-top: 10px;
+    background-color: #10b981;
+    color: white;
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+    padding:40px;
+    max-width:1400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.card{
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    overflow:hidden;/*To keep the image corners rounded as well*/
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    width:100%;
+    height:250px;
+    object-fit: cover;/*Crops the image samrtly*/
+}
+.card h3{
+    padding:15px 15px 5px;/*Top Side Bottom*/
+    font-size: 1.4rem;
+}
+.card p{
+    padding: 0 15px;
+    color:#9ca3af;
+    margin-bottom: 5px;
+}
+.card span{
+    padding: 0 15px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 10px;
+    display: block;
+    color:var(--text-color);
+}
+.card button{
+    margin:5px 15px 10px;
+    padding:10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor:pointer;
+    border:none;
+
+}
+.card button:hover{
+    opacity:0.9;
+}
+.card button:first-of-type{
+    background-color: #ef4444;
+    color: white;
+}
+.card button:last-of-type{
+    background-color: #3b82f6;
+    color:white;
+}
