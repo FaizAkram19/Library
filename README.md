@@ -1,1 +1,3 @@
 # Library
+I have built a Library webpage where i can make entries of the books I've read or amm going to read in the future.
+It's something that made me use everything I've learned so far and it was quite tough. There were parts which I didn't know how to do by myself and for those I took AI's help(like light/dark toggle option) BUT I didn't copy/paste anything, I understood it the codebase and then wrote it myslef.
